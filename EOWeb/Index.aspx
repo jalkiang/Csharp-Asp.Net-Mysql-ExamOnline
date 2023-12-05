@@ -1,16 +1,25 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="EOWeb.Index" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>在线考试系统首页</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="EOWeb.Index" MasterPageFile="~/Site1.Master"%>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentPlaceHolder1" runat="server">
+    <div>
+        <table>
+            <tr>
+                <th>姓名</th>
+                <th>详细信息</th>
+            </tr>
+            <tr>
+                <td>里</td>
+                <td><a href="./htmls/Detail.aspx?num=666">详细信息</a></td>
+            </tr>
+            <tr>
+                <td>里</td>
+                <td><a href="./htmls/Detail.aspx?num=777">详细信息</a></td>
+            </tr>
+            <tr>
+                <td>里</td>
+                <td><a href="./htmls/Detail.aspx?num=888">详细信息</a></td>
+            </tr>
+        </table>
+    </div>
+</asp:Content>
