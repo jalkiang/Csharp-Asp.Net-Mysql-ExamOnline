@@ -32,6 +32,7 @@ namespace EODAL
             try
             {
                 result = Convert.ToInt32(cmd.ExecuteScalar());
+                Console.WriteLine(result);
             }
             finally { conn.Close(); }
             return result;

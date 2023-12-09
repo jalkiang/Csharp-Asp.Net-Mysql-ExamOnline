@@ -119,12 +119,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Admin_Index.aspx" />
+    <Content Include="css\master.css" />
     <Content Include="htmls\Detail.aspx" />
     <Content Include="Index.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="htmls\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Admin_Index.aspx.cs">
+      <DependentUpon>Admin_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Index.aspx.designer.cs">
+      <DependentUpon>Admin_Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="htmls\Detail.aspx.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,11 +148,11 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="htmls\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="htmls\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -188,6 +197,7 @@
       <Name>EOModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -38,3 +38,9 @@ C:\Users\liang\Desktop\毕业设计\ExamOnline\EOBLL\obj\Debug\EOBLL.csproj.Core
 C:\Users\liang\Desktop\毕业设计\ExamOnline\EOBLL\obj\Debug\EOBLL.csproj.CopyComplete
 C:\Users\liang\Desktop\毕业设计\ExamOnline\EOBLL\obj\Debug\EOBLL.dll
 C:\Users\liang\Desktop\毕业设计\ExamOnline\EOBLL\obj\Debug\EOBLL.pdb
+C:\Users\liang\Desktop\毕业设计\ExamOnline\EOBLL\bin\Debug\EODAL.dll
+C:\Users\liang\Desktop\毕业设计\ExamOnline\EOBLL\bin\Debug\EOModel.dll
+C:\Users\liang\Desktop\毕业设计\ExamOnline\EOBLL\bin\Debug\EODAL.pdb
+C:\Users\liang\Desktop\毕业设计\ExamOnline\EOBLL\bin\Debug\EODAL.dll.config
+C:\Users\liang\Desktop\毕业设计\ExamOnline\EOBLL\bin\Debug\EOModel.pdb
+C:\Users\liang\Desktop\毕业设计\ExamOnline\EOBLL\bin\Debug\EOModel.dll.config

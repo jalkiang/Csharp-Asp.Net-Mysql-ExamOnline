@@ -93,12 +93,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BLL_User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EODAL\EODAL.csproj">
+      <Project>{dcd8f7fc-9b1b-40ea-971f-87cad004b762}</Project>
+      <Name>EODAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EOModel\EOModel.csproj">
+      <Project>{c2f46836-9f47-46c9-bdab-c0af1a549eb1}</Project>
+      <Name>EOModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
