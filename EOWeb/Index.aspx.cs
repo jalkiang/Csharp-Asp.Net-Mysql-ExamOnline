@@ -11,7 +11,16 @@ namespace EOWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserName"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+        }
 
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Session.Remove("UserName");
+            Response.Redirect("Login.aspx");
         }
     }
 }
