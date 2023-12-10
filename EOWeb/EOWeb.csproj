@@ -124,6 +124,7 @@
     <Content Include="htmls\Detail.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="htmls\Login.aspx" />
+    <Content Include="javascript\master.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

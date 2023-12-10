@@ -17,6 +17,5 @@ namespace EOBLL
             return rs;
         }
 
-        public int UserSignup(string sql) { }
     }
 }

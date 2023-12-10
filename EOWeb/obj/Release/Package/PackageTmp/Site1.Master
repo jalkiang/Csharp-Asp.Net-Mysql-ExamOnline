@@ -6,13 +6,24 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link rel="stylesheet" href="~/css/master.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="top">
             <h1>在线考试系统</h1>
+                <div class="div_nav">
+                    <nav>
+                        <a href="/Index.aspx">首页</a>
+                        <a href="#">abot</a>
+                        <a href="#">blog</a>
+                        <a href="#">protfolio</a>
+                        <a href="/htmls/Login.aspx">登录</a>
+                        <div class="animation start-home" id="animation" runat="server"></div>
+                    </nav>
+                </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
