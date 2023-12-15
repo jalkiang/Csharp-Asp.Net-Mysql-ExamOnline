@@ -11,17 +11,17 @@ namespace EOWeb
 {
 
 
-    public partial class Login
+    public partial class Register
     {
 
         /// <summary>
-        /// LinkButton1 控件。
+        /// lb_Register 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.LinkButton lb_Register;
 
         /// <summary>
         /// tb_userName 控件。
@@ -42,30 +42,21 @@ namespace EOWeb
         protected global::System.Web.UI.WebControls.TextBox tb_password;
 
         /// <summary>
-        /// CheckBox1 控件。
+        /// tb_confpassword 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.TextBox tb_confpassword;
 
         /// <summary>
-        /// CheckBox2 控件。
+        /// btn_Register 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
-
-        /// <summary>
-        /// btn_Login 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Login;
+        protected global::System.Web.UI.WebControls.Button btn_Register;
     }
 }

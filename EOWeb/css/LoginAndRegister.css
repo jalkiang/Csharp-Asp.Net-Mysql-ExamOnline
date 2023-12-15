@@ -1,0 +1,62 @@
+﻿:root {
+    --background-color: #f9f9f9;
+    --color1-font1: #0078d4;
+    --color1: #fbfafa;
+    --color2: #ccc;
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    text-decoration:none;
+}
+body {
+    font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+}
+.container {
+    width: 350px;
+    height: 450px;
+    background-color: var(--background-color);
+    margin: 5% auto;
+    color: black;
+    border-radius: 15px;
+    padding: 40px;
+    transition: .5s;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #0078d4;
+}
+
+    .container h1 {
+        text-align: center;
+        margin: 15px 0;
+        letter-spacing: 1px;
+        color: var(--color1-font1);
+    }
+
+    .container .form_group{
+        margin-bottom:10px;
+        width:100%;
+    }
+
+    .container .form_group .form_control {
+        border: none;
+        background: transparent;
+        border-radius:5px;
+        outline: none;
+        padding: 8px;
+        width: 100% ;
+        margin-top: 15px;
+        background-color:var(--color2);
+    }
+
+        .container .form_group .btn_Login {
+            color:var(--color1-font1);
+            border:0;
+            padding:10px 0;
+            background-color:var(--color1);
+            border:0.5px solid #ccc;
+            border-radius:50px;
+            letter-spacing:0.5px;
+            transition:0.5s;
+        }

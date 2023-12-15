@@ -120,8 +120,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Admin_Index.aspx" />
+    <Content Include="css\LoginAndRegister.css" />
     <Content Include="css\master.css" />
     <Content Include="htmls\Detail.aspx" />
+    <Content Include="htmls\Register.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="htmls\Login.aspx" />
     <Content Include="javascript\master.js" />
@@ -141,6 +143,13 @@
     </Compile>
     <Compile Include="htmls\Detail.aspx.designer.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="htmls\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="htmls\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
