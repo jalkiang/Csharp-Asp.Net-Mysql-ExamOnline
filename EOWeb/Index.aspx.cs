@@ -13,5 +13,16 @@ namespace EOWeb
         {
 
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Session.Remove("UserName");
+            Response.AddHeader("Refresh", "0");
+        }
+
+        protected void LogoutButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

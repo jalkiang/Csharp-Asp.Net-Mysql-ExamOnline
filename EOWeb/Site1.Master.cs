@@ -11,6 +11,25 @@ namespace EOWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string url = Request.Url.AbsolutePath;
+            switch(url)
+            {
+                case "/Index.aspx":
+                    animation.Attributes.Add("class", "animation start-home");
+                    break;
+                case "/htmls/Login.aspx":
+                    animation.Attributes.Add("class", "animation start-login");
+                    break;
+            }
+            /*if(url == "/Index.aspx")
+            {
+                animation.Attributes.Add("class", "animation start-home");
+            }
+
+            else if(url == "/htmls/Login.aspx")
+            {
+                animation.Attributes.Add("class", "animation start-login");
+            }*/
 
         }
     }

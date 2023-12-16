@@ -3,6 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentPlaceHolder1" runat="server">
     <div>
+        <asp:LinkButton ID="LogoutButton" runat="server" OnClick="LogoutButton_Click" Text=<%#Session["UserName"] == null?"登录":"退出登录"%>></asp:LinkButton>
+    </div>
+    <div>
         <table>
             <tr>
                 <th>姓名</th>
