@@ -1,0 +1,117 @@
+﻿:root {
+    --nav-background-color: #a1c4fd;
+    --text-color: #34495e;
+    --color1: #EC3E27;
+    --color2: #fd79a8;
+    --color3: #0984e3;
+    --color4: #00b894;
+    --color5: #fdcb6e;
+    --color6: #e056fd;
+    --color7: #F97F51;
+    --color8: #BDC581;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+}
+
+
+.div_nav {
+    width: 100vw;
+    background-color: var(--nav-background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    position: relative;
+    width: 590px;
+    height: 50px;
+}
+
+nav a {
+    position: relative;
+    display: block;
+    float: left;
+    font-size: 15px;
+    line-height: 50px;
+    height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    z-index: 10;
+}
+
+nav a:nth-child(1) {
+    width: 100px;
+}
+
+nav a:nth-child(2) {
+    width: 110px;
+}
+
+nav a:nth-child(3) {
+    width: 100px;
+}
+
+nav a:nth-child(4) {
+    width: 160px;
+}
+
+nav a:nth-child(5) {
+    width: 120px;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    background-color: #F97F51;
+    z-index: 9;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.start-home,
+nav a:nth-child(1):hover ~ .animation {
+    width: 100px;
+    left: 0px;
+}
+
+.start-about,
+nav a:nth-child(2):hover ~ .animation {
+    width: 110px;
+    left: 100px;
+}
+
+.start-blog,
+nav a:nth-child(3):hover ~ .animation {
+    width: 100px;
+    left: 210px;
+}
+
+.start-protfolio,
+nav a:nth-child(4):hover ~ .animation {
+    width: 160px;
+    left: 310px;
+}
+
+.start-login,
+nav a:nth-child(5):hover ~ .animation {
+    width: 120px;
+    left: 470px;
+}
