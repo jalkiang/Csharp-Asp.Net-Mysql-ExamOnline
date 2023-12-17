@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="EOWeb.htmls.Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="EOWeb.htmls.Register" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="/css/LoginAndRegister.css">
+        <link rel="stylesheet" href="/css/LoginAndRegister.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="container">
-        <h1>登录</h1>没有账号？<asp:LinkButton ID="lb_Register" runat="server">注册</asp:LinkButton>
+    <div class="container">
+        <h1>注册</h1>已有账号？<asp:LinkButton ID="lb_Login" runat="server">登录</asp:LinkButton>
         <div class="form_group">
             <asp:TextBox ID="tb_userName" CssClass="form_control" runat="server" TextMode="SingleLine" Placeholder="请输入账号"></asp:TextBox>
         </div>
@@ -12,11 +12,10 @@
             <asp:TextBox ID="tb_password" CssClass="form_control" runat="server" TextMode="Password" Placeholder="请输入密码"></asp:TextBox>
         </div>
         <div class="form_group">
-            <asp:CheckBox ID="CheckBox1" runat="server" Text="记住账号" />
-            <asp:CheckBox ID="CheckBox2" runat="server" Text="自动登录" />
+            <asp:TextBox ID="tb_confirmPassword" CssClass="form_control" runat="server" TextMode="Password" Placeholder="确认密码"></asp:TextBox>
         </div>
         <div class="form_group">
-            <asp:Button ID="btn_Login" CssClass="form_control btn_Login" runat="server" Text="登录" OnClick="Button1_Click"/>
+            <asp:Button ID="btn_Register" CssClass="form_control btn_Register" runat="server" Text="注册" OnClick="Button1_Click"/>
         </div>
     </div>
 </asp:Content>

@@ -14,11 +14,15 @@ namespace EOWeb
             string url = Request.Url.AbsolutePath;
             switch(url)
             {
+                case "/index.aspx":
                 case "/Index.aspx":
                     animation.Attributes.Add("class", "animation start-home");
                     break;
                 case "/htmls/Login.aspx":
                     animation.Attributes.Add("class", "animation start-login");
+                    break;
+                default:
+                    animation.Attributes.Add("class", "animation ");
                     break;
             }
             /*if(url == "/Index.aspx")
@@ -31,6 +35,16 @@ namespace EOWeb
                 animation.Attributes.Add("class", "animation start-login");
             }*/
 
+        }
+
+        protected void lb_register_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/htmls/Register.aspx");
+        }
+
+        protected void lb_login_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/htmls/Login.aspx");
         }
     }
 }

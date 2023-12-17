@@ -17,5 +17,12 @@ namespace EOBLL
             return rs;
         }
 
+        public int UserRegister(Hashtable ht)
+        {
+            string sql = "INSERT INTO tb_user(uName,uPwd) VALUES(@username,@password)";
+            int rs = DBHelperMysql.excutScal(sql, ht);
+            return rs;
+        }
+
     }
 }

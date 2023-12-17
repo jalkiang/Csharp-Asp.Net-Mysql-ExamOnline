@@ -14,7 +14,8 @@
     <form id="form1" runat="server">
         <div class="top">
             <h1>在线考试系统</h1>
-                <div class="div_nav">
+            <div class="div_navigation">
+               <div class="div_nav">
                     <nav>
                         <a href="/Index.aspx">首页</a>
                         <a href="#">abot</a>
@@ -24,6 +25,12 @@
                         <div class="animation start-home" id="animation" runat="server"></div>
                     </nav>
                 </div>
+                <div class="login_status">
+                    <div class="status_noLogin">
+                        <asp:LinkButton ID="lb_login" runat="server" OnClick="lb_login_Click">登录</asp:LinkButton>或<asp:LinkButton ID="lb_register" runat="server" OnClick="lb_register_Click">注册</asp:LinkButton>
+                    </div>
+                </div>
+            </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

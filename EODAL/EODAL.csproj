@@ -93,6 +93,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBHelper.cs" />
     <Compile Include="DBHelperMysql.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

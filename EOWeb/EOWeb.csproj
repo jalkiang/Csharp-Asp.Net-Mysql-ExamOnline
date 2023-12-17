@@ -124,6 +124,7 @@
     <Content Include="css\master.css" />
     <Content Include="htmls\Detail.aspx" />
     <Content Include="htmls\Login.aspx" />
+    <Content Include="htmls\Register.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="javascript\master.js" />
     <Content Include="Web.config" />
@@ -149,6 +150,13 @@
     </Compile>
     <Compile Include="htmls\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="htmls\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="htmls\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

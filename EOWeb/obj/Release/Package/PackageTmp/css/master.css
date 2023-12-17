@@ -9,6 +9,7 @@
     --color6: #e056fd;
     --color7: #F97F51;
     --color8: #BDC581;
+    --color1-font1: #0078d4;
 }
 
 * {
@@ -29,12 +30,19 @@ body {
     font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
 }
 
-
-.div_nav {
+.div_navigation {
     width: 100vw;
     background-color: var(--nav-background-color);
     border-radius: 8px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    font-size: 15px;
+    line-height: 50px;
+}
+
+.div_nav {
+    width: 70vw;
+
 }
 
 nav {
@@ -47,8 +55,6 @@ nav a {
     position: relative;
     display: block;
     float: left;
-    font-size: 15px;
-    line-height: 50px;
     height: 50px;
     color: #fff;
     text-transform: uppercase;
@@ -115,3 +121,17 @@ nav a:nth-child(5):hover ~ .animation {
     width: 120px;
     left: 470px;
 }
+
+.login_status {
+    width:30vw;
+    color:#fff;
+    text-align:right;
+    margin-right:20px;
+}
+
+    .login_status a {
+        color: var(--color1-font1);
+        text-decoration: none;
+        letter-spacing: 10px;
+        margin-left:10px;
+    }
