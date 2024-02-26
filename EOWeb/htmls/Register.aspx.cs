@@ -34,7 +34,7 @@ namespace EOWeb.htmls
             {
                 Response.Write("<script>alert('两次密码不一致')</script>");
 
-            }
+        }
 
             else
             {
