@@ -25,4 +25,7 @@
             </tr>
         </table>
     </div>
+    <div>
+        <asp:HyperLink ID="hyperlink1" runat="server" NavigateUrl="~/htmls/web1.aspx">点击这里跳转到目标页面</asp:HyperLink>
+    </div>
 </asp:Content>

@@ -14,16 +14,32 @@ namespace EOWeb.htmls
         BLL_User bu = new BLL_User();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //设置条件登录后无法进入登录界面
+            if (Session["UserName"]  != null)
+            {
+                string value = HttpContext.Current.Session["UserName"].ToString();
+                if (value != "admin")
+                {
+                    Response.Write("<script>alert('您已登录！')</script>");
+                    Response.Write("<script>window.location.href='/index.aspx'</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('您已登录！')</script>");
+                    Response.Write("<script>window.location.href='/Admin/index.aspx'</script>");
+                }
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             string userName = tb_userName.Text;
             string password = tb_password.Text;
             Hashtable ht = new Hashtable();
             ht.Add("uName", tb_userName.Text.ToString());
             ht.Add("uPwd", tb_password.Text.ToString());
+
 
             int resilc = bu.UserLogin(ht);
 
@@ -47,6 +63,8 @@ namespace EOWeb.htmls
             {
                 Response.Write("<script>alert('用户名或密码错误')</script>");
             }
+
+
         }
     }
 }

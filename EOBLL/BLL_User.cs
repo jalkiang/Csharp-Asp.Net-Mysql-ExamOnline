@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace EOBLL
@@ -24,5 +25,11 @@ namespace EOBLL
             return rs;
         }
 
+        public int SearchUser(Hashtable ht)
+        {
+            string sql = "Select * from tb_user where uName = @uName";
+            int rs = DBHelperMysql.excutScal(sql, ht);
+            return rs;
+        }
     }
 }

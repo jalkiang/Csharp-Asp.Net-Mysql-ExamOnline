@@ -11,11 +11,21 @@ namespace EOWeb.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["UserName"] == null)
             {
                 Response.Write("<script>alert('请登录后再访问！')</script>");
                 Response.Write("<script>window.location.href='/htmls/Login.aspx'</script>");
                 //Response.Redirect("~/htmls/Login.aspx");
+            }
+            else if(HttpContext.Current.Session != null)
+            {
+                string value = HttpContext.Current.Session["UserName"].ToString();
+                if(value != "admin")
+                {
+                    Response.Write("<script>alert('禁止访问！')</script>");
+                    Response.Write("<script>window.location.href='/index.aspx'</script>");
+                }
             }
             
         }

@@ -7,29 +7,29 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace EOWeb
+namespace EOWeb.htmls
 {
 
 
-    public partial class Index
+    public partial class web1
     {
 
         /// <summary>
-        /// LogoutButton 控件。
+        /// form1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LogoutButton;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// hyperlink1 控件。
+        /// LinkButton1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hyperlink1;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
     }
 }
