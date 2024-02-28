@@ -17,6 +17,7 @@ namespace EOWeb.Admin
                 Response.Write("<script>window.location.href='/htmls/Login.aspx'</script>");
                 //Response.Redirect("~/htmls/Login.aspx");
             }
+            
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)

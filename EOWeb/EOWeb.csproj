@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Admin_Index.aspx" />
+    <Content Include="css\Admin.css" />
     <Content Include="css\LoginAndRegister.css" />
     <Content Include="css\master.css" />
     <Content Include="htmls\Detail.aspx" />
