@@ -11,7 +11,7 @@ namespace EOWeb.htmls
 {
     public partial class Login : System.Web.UI.Page
     {
-        BLL_User bu = new BLL_User();
+        BLL_Student bu = new BLL_Student();
         protected void Page_Load(object sender, EventArgs e)
         {
             //设置条件登录后无法进入登录界面
@@ -38,7 +38,7 @@ namespace EOWeb.htmls
             string password = tb_password.Text;
             Hashtable ht = new Hashtable();
             ht.Add("uName", tb_userName.Text.ToString());
-            ht.Add("uPwd", tb_password.Text.ToString());
+            ht.Add("uPassword", tb_password.Text.ToString());
 
 
             int resilc = bu.UserLogin(ht);
@@ -47,13 +47,7 @@ namespace EOWeb.htmls
             {
                 Response.Write("账号密码不能为空");
             }
-            else if (resilc == 2)
-            {
-                Response.Write("登录成功");
-                Session["UserName"] = userName;
-                Response.Redirect("~/Admin/Admin_Index.aspx");
-            }
-            else if (resilc == 1)
+            else if (resilc != 0)
             {
                 Response.Write("登录成功");
                 Session["UserName"] = userName;

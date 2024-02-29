@@ -11,7 +11,7 @@ namespace EOWeb.htmls
 {
     public partial class Register : System.Web.UI.Page
     {
-        BLL_User bu = new BLL_User();
+        BLL_Student bu = new BLL_Student();
         protected void Page_Load(object sender, EventArgs e)
         {
             //设置条件登录后无法进入注册界面

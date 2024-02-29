@@ -93,7 +93,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL_User.cs" />
+    <Compile Include="BLL_Student.cs" />
+    <Compile Include="BLL_Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

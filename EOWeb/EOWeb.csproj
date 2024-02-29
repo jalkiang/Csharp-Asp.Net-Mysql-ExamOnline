@@ -126,6 +126,7 @@
     <Content Include="htmls\Detail.aspx" />
     <Content Include="htmls\Login.aspx" />
     <Content Include="htmls\Register.aspx" />
+    <Content Include="htmls\teacherLogin.aspx" />
     <Content Include="htmls\web1.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="javascript\master.js" />
@@ -159,6 +160,13 @@
     </Compile>
     <Compile Include="htmls\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="htmls\teacherLogin.aspx.cs">
+      <DependentUpon>teacherLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="htmls\teacherLogin.aspx.designer.cs">
+      <DependentUpon>teacherLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="htmls\web1.aspx.cs">
       <DependentUpon>web1.aspx</DependentUpon>

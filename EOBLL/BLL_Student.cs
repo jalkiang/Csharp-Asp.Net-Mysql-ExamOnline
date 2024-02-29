@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace EOBLL
 {
-    public class BLL_User
+    public class BLL_Student
     {
         public int UserLogin(Hashtable ht) 
         {
-            string sql = "select IsAdmin from tb_user where uName=@uName and uPwd=@uPwd";
+            string sql = "select * from tb_student where uName=@uName and uPassword=@uPassword";
             int rs = DBHelperMysql.excutScal(sql, ht);
             return rs;
         }
@@ -27,7 +27,7 @@ namespace EOBLL
 
         public int SearchUser(Hashtable ht)
         {
-            string sql = "Select * from tb_user where uName = @uName";
+            string sql = "Select * from tb_user where uName = @uName65";
             int rs = DBHelperMysql.excutScal(sql, ht);
             return rs;
         }
