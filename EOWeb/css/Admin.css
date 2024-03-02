@@ -11,8 +11,8 @@
     --color8: #BDC581;
     --color-bg: #e7e7e7;
     --color-menu-bg: #2f3f56;
-    --font-color-mi: #c9cdd4;
-    --font-color-mi-hover: #fff;
+    --font-color-mi: #ffffff;
+    --font-color-mi-hover: #ffffff;
     --color-bg-mi-hover: #303030;
     --border-radius-mi: 2px;
     --transition-menu-time: 0.2s;
@@ -75,7 +75,7 @@
         }
 
         .menu-box > label:hover {
-            box-shadow: 0px 0px 2px 0px #000;
+            box-shadow: 0px 0px 2px 0px #fff;
             color: var(--font-color-mi-hover);
         }
 
@@ -94,6 +94,7 @@
 .menu-title {
     text-align: center;
     margin-bottom: 10px;
+    color:var(--font-color-mi);
 }
 
 .menu-item > label {
@@ -102,11 +103,12 @@
     height: 50px;
     border-radius: var(--border-radius-mi);
     display: flex;
+    color:var(--font-color-mi);
     align-items: center;
 }
 
     .menu-item > label:hover {
-        color: var(--font-color-mi-hover);
+        color: var(--color7);
     }
 
     .menu-item > label > i:first-child {
@@ -128,13 +130,14 @@
     }
 
 .menu-item > input:checked + label > i:last-child {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
 }
 
 .menu-content {
     height: 0;
     overflow: hidden;
     transition: height var(--transition-menu-time);
+    color:var(--font-color-mi);
     display: flex;
     flex-wrap: wrap;
     background-color: var(--color-menu-bg);
@@ -162,7 +165,7 @@
 
     .menu-content > span:hover {
         background-color: var(--color-bg-mi-hover);
-        color: var(--font-color-mi-hover);
+        color: var(--color7);
     }
 
 .set-line {
