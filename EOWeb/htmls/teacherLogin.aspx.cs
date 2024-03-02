@@ -32,11 +32,20 @@ namespace EOWeb.htmls
             {
                 Response.Write("账号密码不能为空");
             }
-            else if (resilc != 0)
+            else if (resilc == 2)
             {
                 Response.Write("登录成功");
                 Session["UserName"] = userName;
-                Response.Redirect("~/Index.aspx");
+                Session["Authority"] = 2;
+                Response.Redirect("~/Teacher/Teacher_Index.aspx");
+            }
+            else if(resilc == 3)
+            {
+                Response.Write("登录成功");
+                Session["UserName"] = userName;
+                Session["Authority"] = 3;
+                int value = (int)Session["Authority"];
+                Response.Redirect("~/Admin/Admin_Index.aspx");
             }
             else
             {

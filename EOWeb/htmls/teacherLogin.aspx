@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="teacherLogin.aspx.cs" Inherits="EOWeb.htmls.techerLogin" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="teacherLogin.aspx.cs" Inherits="EOWeb.htmls.techerLogin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
         <link rel="stylesheet" href="/css/LoginAndRegister.css">
 </asp:Content>
