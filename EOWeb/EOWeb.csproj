@@ -131,7 +131,7 @@
     <Content Include="htmls\web1.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="javascript\master.js" />
-    <Content Include="Teacher\Teacher_Index.aspx" />
+    <Content Include="Teacher\Teacher_index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -197,12 +197,19 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
-    <Compile Include="Teacher\Teacher_Index.aspx.cs">
-      <DependentUpon>Teacher_Index.aspx</DependentUpon>
+    <Compile Include="Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Teacher\Teacher_Index.aspx.designer.cs">
-      <DependentUpon>Teacher_Index.aspx</DependentUpon>
+    <Compile Include="Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Teacher_index.aspx.cs">
+      <DependentUpon>Teacher_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\Teacher_index.aspx.designer.cs">
+      <DependentUpon>Teacher_index.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +219,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Site2.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

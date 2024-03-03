@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="EOWeb.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="~/css/Admin.css">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="content">
+            <div class="menu-box">
+                    <div class="menu-title">
+                        <h1>主页</h1>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item1" />
+                        <label for="menu-item1">                           
+                            <span>账号管理</span>
+                            <i class="menu-item-last">></i>
+                        </label>
+                        <div class="menu-content">
+                            <span>个人信息</span>
+                            <span>修改密码</span>
+                            <span>option3</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item2" />
+                        <label for="menu-item2">
+                            <span>学生管理</span>
+                            <i class="menu-item-last">></i>
+                        </label>
+                        <div class="menu-content">
+                            <span>option1</span>
+                            <span>option2</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="menu-item3" />
+                        <label for="menu-item3">
+                            <span>账号管理</span>
+                            <i class="menu-item-last">></i>
+                        </label>
+                        <div class="menu-content">
+                            <span>个人信息</span>
+                            <span>修改密码</span>
+                        </div>
+                    </div>
+
+                    <div class="set-line"></div>
+
+                    <div class="menu-item">
+                        <label>
+                            <span>设置</span>
+                        </label>
+                    </div>
+                </div>
+            <div class="page-box">
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               </asp:ContentPlaceHolder>
+            </div>
+
+        </div>
+
+    </form>
+</body>
+</html>
