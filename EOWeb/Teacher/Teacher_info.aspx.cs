@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace EOWeb.Teacher
 {
-    public partial class Teacher_index : System.Web.UI.Page
+    public partial class Teacher_info : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

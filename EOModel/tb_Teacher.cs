@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace EOModel
 {
-    internal class tb_Teacher
+    public class tb_Teacher
     {
+        public int TeacherID { get; set; }
+        public string TeacherName { get; set; }
+        public string TeacherPasswood { get; set; }
+        public int authority {  get; set; }
     }
 }
