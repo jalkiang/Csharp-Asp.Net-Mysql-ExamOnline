@@ -19,5 +19,18 @@ namespace EOBLL
             int rs = DBHelperMysql.excutScal(sql, ht);
             return rs;
         }
+
+        public bool TeacherRegister(EOModel.tb_Teacher tb_teacher)
+        {
+            bool res = false;
+            string strsql = "INSERT INTO tb_teacher(tName,tPassword) VALUES('"+tb_teacher.TeacherName+"','"+tb_teacher.TeacherPasswood+"')";
+            int i = DBHelperMysql.ExcutSql(strsql);
+            if(i>0)
+            {
+                res = true;
+            }
+            return res;
+        }
+
     }
 }

@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,24 @@ namespace EODAL
             }
             finally { conn.Close(); }
             return result;
+        }
+
+        public static int ExcutSql(string SQLString)
+        {
+            using (MySqlCommand cmd = new MySqlCommand(SQLString,conn))
+            {
+                try
+                {
+                    conn.Open();
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows;
+                }
+                catch (Exception E)
+                {
+                    conn.Close();
+                    throw new Exception(E.Message);
+                }
+            }
         }
     }
 }

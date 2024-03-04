@@ -8,9 +8,16 @@ namespace EOModel
 {
     public class tb_Teacher
     {
-        public int TeacherID { get; set; }
-        public string TeacherName { get; set; }
-        public string TeacherPasswood { get; set; }
-        public int authority {  get; set; }
+        private int teacherID;
+        private string teacherName;
+        private string teacherPasswood;
+        private int authority;
+        private string subject;
+
+        public int TeacherID { get => teacherID; set => teacherID = value; }
+        public string TeacherName { get => teacherName; set => teacherName = value; }
+        public string TeacherPasswood { get => teacherPasswood; set => teacherPasswood = value; }
+        public int Authority { get => authority; set => authority = value; }
+        public string Subject { get => subject; set => subject = value; }
     }
 }
