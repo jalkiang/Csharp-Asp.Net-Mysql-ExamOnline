@@ -53,8 +53,50 @@ namespace EODAL
                 catch (Exception E)
                 {
                     conn.Close();
+                    return 0;
+                    //throw new Exception(E.Message);
+                }
+                finally { conn.Close(); }
+            }
+        }
+
+        public static int ExcutSqlrint(string SQLString)
+        {
+            using (MySqlCommand cmd = new MySqlCommand(SQLString, conn))
+            {
+                try
+                {
+                    conn.Open();
+                    int rows = (int)Convert.ToInt32(cmd.ExecuteScalar());
+                    return rows;
+                }
+                catch (Exception E)
+                {
+                    conn.Close();
+                    return 0;
+                    //throw new Exception(E.Message);
+                }
+                finally { conn.Close(); }
+            }
+        }
+
+        public static object ExcutSqlrobj(string SQLString)
+        {
+            using (MySqlCommand cmd = new MySqlCommand(SQLString, conn))
+            {
+                try
+                {
+                    conn.Open();
+                    object rows = cmd.ExecuteScalar();
+                    return rows;
+                }
+                catch (Exception E)
+                {
+                    conn.Close();
+                    //return null;
                     throw new Exception(E.Message);
                 }
+                finally { conn.Close(); }
             }
         }
     }

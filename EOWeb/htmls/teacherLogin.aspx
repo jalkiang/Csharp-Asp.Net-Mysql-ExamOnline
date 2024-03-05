@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
-        <h1>教师登录</h1>
+        <h1>教师登录</h1>没有账号？<asp:HyperLink ID="hyperlink2" runat="server" NavigateUrl="~/htmls/teacherRegister.aspx">注册</asp:HyperLink>
         <div class="form_group">
             <asp:TextBox ID="tb_userName" CssClass="form_control" runat="server" TextMode="SingleLine" Placeholder="请输入账号"></asp:TextBox>
         </div>

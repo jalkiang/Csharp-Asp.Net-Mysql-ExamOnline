@@ -12,7 +12,7 @@ namespace EOWeb.htmls
 {
     public partial class techerLogin : System.Web.UI.Page
     {
-        BLL_Teacher bt = new BLL_Teacher();
+        EOBLL.BLL_Teacher bLL_Teacher = new BLL_Teacher();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,10 +22,14 @@ namespace EOWeb.htmls
         {
             string userName = tb_userName.Text;
             string password = tb_password.Text;
-            Hashtable ht = new Hashtable();
-            ht.Add("Name", tb_userName.Text.ToString());
-            ht.Add("Password", tb_password.Text.ToString());
-            int resilc = bt.UserTeacherLogin(ht);
+
+            EOModel.tb_Teacher tb_teacher = new EOModel.tb_Teacher();
+
+            tb_teacher.TeacherName = this.tb_userName.Text;
+            tb_teacher.TeacherPassword = this.tb_password.Text;
+            int resilc = bLL_Teacher.UserTeacherLogin(tb_teacher);
+
+
 
 
             if (userName == null || password == null)
@@ -34,10 +38,12 @@ namespace EOWeb.htmls
             }
             else if (resilc == 2)
             {
-                Response.Write("登录成功");
                 Session["UserName"] = userName;
-                Session["Authority"] = 2;
-                Response.Redirect("~/Teacher/Teacher_Index.aspx");
+                tb_teacher.Authority = 2;
+
+                
+                object j =  bLL_Teacher.TeacherInfoList(tb_teacher);
+                //Response.Redirect("~/Teacher/Teacher_Index.aspx");
             }
             else if(resilc == 3)
             {

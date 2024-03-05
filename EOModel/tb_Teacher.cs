@@ -10,14 +10,14 @@ namespace EOModel
     {
         private int teacherID;
         private string teacherName;
-        private string teacherPasswood;
+        private string teacherPassword;
         private int authority;
         private string subject;
 
         public int TeacherID { get => teacherID; set => teacherID = value; }
         public string TeacherName { get => teacherName; set => teacherName = value; }
-        public string TeacherPasswood { get => teacherPasswood; set => teacherPasswood = value; }
         public int Authority { get => authority; set => authority = value; }
         public string Subject { get => subject; set => subject = value; }
+        public string TeacherPassword { get => teacherPassword; set => teacherPassword = value; }
     }
 }
