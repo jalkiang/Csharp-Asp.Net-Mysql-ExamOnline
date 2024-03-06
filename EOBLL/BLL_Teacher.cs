@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EODAL;
 using EOModel;
+using MySql.Data.MySqlClient;
 
 namespace EOBLL
 {
@@ -39,5 +41,11 @@ namespace EOBLL
             return i;
         }
 
+        public List<tb_Teacher> tInfoList(EOModel.tb_Teacher tb_teacher)
+        {
+            string strsql = "SELECT * FROM tb_teacher where tName = '"+tb_teacher.TeacherName+"'";
+            List<tb_Teacher> t1 =  DBHelperMysql.seledb(strsql);
+            return t1;
+        }
     }
 }

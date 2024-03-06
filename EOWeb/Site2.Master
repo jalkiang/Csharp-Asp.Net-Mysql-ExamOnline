@@ -26,7 +26,7 @@
                             <i class="menu-item-last">></i>
                         </label>
                         <div class="menu-content">
-                            <span>个人信息</span>
+                            <span id="span_info" runat="server">个人信息</span>
                             <span>修改密码</span>
                             <span>option3</span>
                         </div>

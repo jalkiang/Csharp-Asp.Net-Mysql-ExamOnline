@@ -2,7 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <span>教师编号：<asp:Label ID="lb_teacherId" runat="server" Text=""></asp:Label></span>
-    </div>
+    <table border="1" class="tb_tinfo">
+        <caption>个人信息</caption>
+        <thead>
+            <tr>
+                <td>教师ID：</td>
+                <td>姓名：</td>
+                <td>科目：</td>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
 </asp:Content>

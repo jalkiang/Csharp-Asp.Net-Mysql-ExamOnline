@@ -40,10 +40,9 @@ namespace EOWeb.htmls
             {
                 Session["UserName"] = userName;
                 tb_teacher.Authority = 2;
+                tb_teacher.TeacherName = userName;
 
-                
-                object j =  bLL_Teacher.TeacherInfoList(tb_teacher);
-                //Response.Redirect("~/Teacher/Teacher_Index.aspx");
+                Response.Redirect("~/Teacher/Teacher_Index.aspx");
             }
             else if(resilc == 3)
             {

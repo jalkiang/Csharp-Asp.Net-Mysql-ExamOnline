@@ -1,9 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿using EOModel;
+using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Ocsp;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -16,6 +18,7 @@ namespace EODAL
         //数据库的连接工作
         private static string connectionString = ConfigurationManager.ConnectionStrings["MySQLConnection"].ConnectionString;
         static MySqlConnection conn = new MySqlConnection(connectionString);
+        EOModel.tb_Teacher tb_teacher = new EOModel.tb_Teacher();
 
         //封装ExecuScal方法，返回值为int类型
         public static int excutScal(string sql , Hashtable ht)
@@ -94,6 +97,34 @@ namespace EODAL
                 {
                     conn.Close();
                     //return null;
+                    throw new Exception(E.Message);
+                }
+                finally { conn.Close(); }
+            }
+        }
+
+        public static List<tb_Teacher> seledb(string SQLString)
+        {
+            using (MySqlCommand cmd = new MySqlCommand(SQLString, conn))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlDataReader dr = cmd.ExecuteReader();
+                    List<tb_Teacher> t1 = new List<tb_Teacher>();
+                    while(dr.Read())
+                    {
+                        tb_Teacher t0 = new tb_Teacher();
+                        t0.TeacherID = (int)dr["tId"];
+                        t0.TeacherName = dr["tName"].ToString();
+                        t0.Subject = dr["Subject"].ToString() ;  
+                        t1.Add(t0);
+                    }
+                    return t1;
+                }
+                catch (Exception E)
+                {
+                    conn.Close();
                     throw new Exception(E.Message);
                 }
                 finally { conn.Close(); }

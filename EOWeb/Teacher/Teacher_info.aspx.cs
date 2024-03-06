@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EOModel;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +15,10 @@ namespace EOWeb.Teacher
         EOModel.tb_Teacher tb_teacher = new EOModel.tb_Teacher();
         protected void Page_Load(object sender, EventArgs e)
         {
-            int teaId = tb_teacher.TeacherID;
+            GridView gv = new GridView();
+            tb_teacher.TeacherName =  Session["UserName"].ToString();
+            List<tb_Teacher> dr = bLL_Teacher.tInfoList(tb_teacher);
+            
         }
     }
 }
