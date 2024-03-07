@@ -13,11 +13,13 @@ namespace EOModel
         private string teacherPassword;
         private int authority;
         private string subject;
+        private string teacherPhone;
 
         public int TeacherID { get => teacherID; set => teacherID = value; }
         public string TeacherName { get => teacherName; set => teacherName = value; }
         public int Authority { get => authority; set => authority = value; }
         public string Subject { get => subject; set => subject = value; }
         public string TeacherPassword { get => teacherPassword; set => teacherPassword = value; }
+        public string TeacherPhone { get => teacherPhone; set => teacherPhone = value; }
     }
 }

@@ -2,17 +2,41 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table border="1" class="tb_tinfo">
-        <caption>个人信息</caption>
-        <thead>
-            <tr>
-                <td>教师ID：</td>
-                <td>姓名：</td>
-                <td>科目：</td>
-            </tr>
-        </thead>
-        <tbody>
-            
-        </tbody>
-    </table>
+    <div class="t_info_container">
+        <div>
+            <h1>个人信息</h1>
+        </div>
+        <div class="t_info_group">
+            <div>
+                教师ID:
+            </div>
+            <div>
+                <asp:Label ID="lb_tId" runat="server" Text=""></asp:Label>
+            </div>
+        </div>
+        <div class="t_info_group">
+            <div>
+                教师姓名：
+            </div>
+            <div>
+                <asp:Label ID="lb_tName" runat="server" Text=""></asp:Label>
+            </div>
+        </div>
+        <div class="t_info_group">
+            <div>
+                手机号：
+            </div>
+            <div>
+                <asp:Label ID="lb_tPhone" runat="server" Text=""></asp:Label>
+            </div>
+        </div>
+        <div class="t_info_group">
+            <div>
+                科目：
+            </div>
+            <div>
+                <asp:Label ID="lb_Subject" runat="server" Text="Label"></asp:Label>
+            </div>
+        </div>
+    </div>
 </asp:Content>

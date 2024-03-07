@@ -117,7 +117,8 @@ namespace EODAL
                         tb_Teacher t0 = new tb_Teacher();
                         t0.TeacherID = (int)dr["tId"];
                         t0.TeacherName = dr["tName"].ToString();
-                        t0.Subject = dr["Subject"].ToString() ;  
+                        t0.Subject = dr["Subject"].ToString() ;
+                        t0.TeacherPhone = dr["tPhone"].ToString();
                         t1.Add(t0);
                     }
                     return t1;

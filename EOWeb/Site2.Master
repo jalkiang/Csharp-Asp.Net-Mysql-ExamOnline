@@ -16,7 +16,7 @@
         <div class="content">
             <div class="menu-box">
                     <div class="menu-title">
-                        <h1>主页</h1>
+                        <a class="a_index" href="/Teacher/Teacher_Index.aspx">主页</a>
                     </div>
 
                     <div class="menu-item">
@@ -51,8 +51,8 @@
                             <i class="menu-item-last">></i>
                         </label>
                         <div class="menu-content">
-                            <span onclick="javascript:window.open('/Teacher/Teacher_info.aspx')">个人信息</span>
-                            <span>修改密码</span>
+                            <a href="/Teacher/Teacher_info.aspx">个人信息</a>
+                            <a href="#">更改密码</a>
                         </div>
                     </div>
 

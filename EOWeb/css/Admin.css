@@ -27,11 +27,16 @@
 
 
 
+.a_index{
+    font-size:50px;
+    color:#fff;
+    text-decoration:none;
+}
 
 .content {
     background-color: var(--color-bg);
     min-height: 97vh;
-    display:flex;
+    display: flex;
 }
 
 .menu-box {
@@ -122,6 +127,7 @@
         flex: 1;
     }
 
+
     .menu-item > label > i:last-child {
         flex: none;
         font-size: 20px;
@@ -164,6 +170,20 @@
     border-radius: var(--border-radius-mi);
 }
 
+.menu-content > a {
+    width: 100%;
+    text-indent: 20px;
+    line-height: 40px;
+    color:#fff;
+    border-radius: var(--border-radius-mi);
+    text-decoration:none;
+}
+
+    .menu-content > a:hover {
+        background-color: var(--color-bg-mi-hover);
+        color: var(--color7);
+    }
+
     .menu-content > span:hover {
         background-color: var(--color-bg-mi-hover);
         color: var(--color7);
@@ -183,4 +203,16 @@
     top:45%;
     left:45%;
     font-size:30px;
+}
+
+.t_info_container {
+    margin: 50px 0px 0px 80px;
+}
+
+.t_info_group{
+    margin-top:20px;
+}
+
+.t_info_group div {
+    display: inline-block;
 }
