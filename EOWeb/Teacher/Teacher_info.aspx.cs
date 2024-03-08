@@ -17,10 +17,32 @@ namespace EOWeb.Teacher
         {
             tb_teacher.TeacherName =  Session["UserName"].ToString();
             List<tb_Teacher> t1 = bLL_Teacher.tInfoList(tb_teacher);
-            lb_tId.Text = t1[0].TeacherID.ToString();
-            lb_tName.Text = t1[0].TeacherName.ToString();
-            lb_Subject.Text = t1[0].Subject.ToString();
-            lb_tPhone.Text = t1[0].TeacherPhone.ToString();
+            if (!IsPostBack)
+            {
+                lb_tId.Text = t1[0].TeacherID.ToString();
+                tb_tName.Text = t1[0].TeacherName.ToString();
+                tb_Subject.Text = t1[0].Subject.ToString();
+                tb_tPhone.Text = t1[0].TeacherPhone.ToString();
+            }
+
+        }
+
+        protected void btn_save_Click(object sender, EventArgs e)
+        {
+            tb_Teacher tb_teacher = new tb_Teacher();
+            tb_teacher.TeacherID= Convert.ToInt32(this.lb_tId.Text);
+            tb_teacher.TeacherName = this.tb_tName.Text;
+            tb_teacher.TeacherPhone = this.tb_tPhone.Text;
+            tb_teacher.Subject=this.tb_Subject.Text;
+            bool res = bLL_Teacher.TeacherInfoSave(tb_teacher);
+            if (res == false)
+            {
+                Response.Write("<script>alert('修改失败')</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('修改成功')</script>");
+            }
         }
     }
 }

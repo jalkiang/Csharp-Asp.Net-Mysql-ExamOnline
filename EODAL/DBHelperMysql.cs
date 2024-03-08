@@ -56,8 +56,8 @@ namespace EODAL
                 catch (Exception E)
                 {
                     conn.Close();
-                    return 0;
-                    //throw new Exception(E.Message);
+                    //return 0;
+                    throw new Exception(E.Message);
                 }
                 finally { conn.Close(); }
             }

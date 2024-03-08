@@ -47,5 +47,17 @@ namespace EOBLL
             List<tb_Teacher> t1 =  DBHelperMysql.seledb(strsql);
             return t1;
         }
+
+        public bool TeacherInfoSave(EOModel.tb_Teacher tb_teacher)
+        {
+            bool res = false;
+            string strsql = "UPDATE tb_teacher SET tName = '"+tb_teacher.TeacherName+"',tPhone = '"+tb_teacher.TeacherPhone+"',`subject` = '"+tb_teacher.Subject+"' WHERE tId = '"+tb_teacher.TeacherID+"';";
+            int i = DBHelperMysql.ExcutSql(strsql);
+            if (i > 0)
+            {
+                res = true;
+            }
+            return res;
+        }
     }
 }
