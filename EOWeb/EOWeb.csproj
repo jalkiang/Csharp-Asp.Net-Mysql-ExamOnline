@@ -134,6 +134,7 @@
     <Content Include="javascript\master.js" />
     <Content Include="Teacher\Teacher_index.aspx" />
     <Content Include="Teacher\Teacher_info.aspx" />
+    <Content Include="Teacher\Teacher_Pwdres.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +227,13 @@
     </Compile>
     <Compile Include="Teacher\Teacher_info.aspx.designer.cs">
       <DependentUpon>Teacher_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Teacher_Pwdres.aspx.cs">
+      <DependentUpon>Teacher_Pwdres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\Teacher_Pwdres.aspx.designer.cs">
+      <DependentUpon>Teacher_Pwdres.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

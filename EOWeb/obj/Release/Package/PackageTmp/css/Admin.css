@@ -2,18 +2,258 @@
     --nav-background-color: #a1c4fd;
     --text-color: #34495e;
     --color1: #EC3E27;
-    --color2: #fd79a8;
+    --color2: #e7e7e7;
     --color3: #0984e3;
     --color4: #00b894;
     --color5: #fdcb6e;
     --color6: #e056fd;
     --color7: #F97F51;
     --color8: #BDC581;
-    --color1-font1: #0078d4;
+    --color-bg: #e7e7e7;
+    --color-menu-bg: #2f3f56;
+    --font-color-mi: #ffffff;
+    --font-color-mi-hover: #ffffff;
+    --color-bg-mi-hover: #303030;
+    --border-radius-mi: 2px;
+    --transition-menu-time: 0.2s;
+    --color-line-bg: #333333;
 }
 
 .top {
     height:50px;
     width:100%;
     background-color:var(--nav-background-color);
+}
+
+.line_ver {
+    width: 11px;
+    border-radius: 25px;
+    background-color: var(--color7);
+}
+
+
+
+.a_index {
+    font-size: 50px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    min-height: 97vh;
+    display: flex;
+}
+
+.menu-box {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    position: relative;
+    width: fit-content;
+    min-height: 97vh;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    background-color: var(--color-menu-bg);
+}
+
+    .menu-box input[type='checkbox'] {
+        display: none;
+    }
+
+    .menu-box > label {
+        position: absolute;
+        top: 48%;
+        right: 0;
+        transform: translateX(50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 4px 0px #fff;
+        background-color: var(--color-menu-bg);
+        color: var(--font-color-mi);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+        .menu-box > label > i {
+            font-weight: 900;
+            text-indent: -3px;
+            font-size: 20px;
+            transition: transform var(--transition-menu-time);
+            transform: rotate(0deg);
+        }
+
+        .menu-box > label:hover {
+            box-shadow: 0px 0px 2px 0px #fff;
+            color: var(--font-color-mi-hover);
+        }
+
+
+.menu {
+    font-size: 18px;
+    width: 220px;
+    min-height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    transition: width var(--transition-menu-time);
+    color: var(--font-color-mi);
+}
+
+
+.menu-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color:var(--font-color-mi);
+}
+
+.menu-item > label, .linkbutton {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-radius: var(--border-radius-mi);
+    display: flex;
+    color: var(--font-color-mi);
+    align-items: center;
+    text-decoration: none;
+}
+
+    .menu-item > label:hover {
+        color: var(--color7);
+    }
+
+    .menu-item > label > i:first-child {
+        flex: none;
+        margin-right: 6px;
+        font-size: 24px;
+    }
+
+    .menu-item > label > span, .linkbutton {
+        flex: 1;
+    }
+
+
+        .menu-item > label > i:last-child{
+            flex: none;
+            font-size: 20px;
+            font-weight: 900;
+            transform: rotate(0deg);
+            transition: transform var(--transition-menu-time);
+        }
+
+.menu-item > input:checked + label > i:last-child {
+    transform: rotate(90deg);
+}
+
+.menu-content {
+    height: 0;
+    overflow: hidden;
+    transition: height var(--transition-menu-time);
+    color:var(--font-color-mi);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-menu-bg);
+}
+
+/* 选项，若 n 项，就 n * 40px */
+.menu-item > input#menu-item1:checked ~ .menu-content {
+    height: calc(3 * 40px);
+}
+
+.menu-item > input#menu-item2:checked ~ .menu-content {
+    height: calc(2 * 40px);
+}
+
+.menu-item > input#menu-item3:checked ~ .menu-content {
+    height: calc(3 * 40px);
+}
+
+.menu-content > a{
+    width: 100%;
+    text-indent: 20px;
+    line-height: 40px;
+    color: #fff;
+    border-radius: var(--border-radius-mi);
+    text-decoration: none;
+}
+
+    .menu-content > a:hover, .linkbutton :hover{
+        background-color: var(--color-bg-mi-hover);
+        color: var(--color7);
+    }
+
+    .menu-content > span:hover {
+        background-color: var(--color-bg-mi-hover);
+        color: var(--color7);
+    }
+
+.set-line {
+    margin: 20px 0 10px 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-line-bg);
+}
+
+.teacher_index_main {
+    color:red;
+    display:block;
+    position:absolute;
+    top:35%;
+    left:45%;
+    font-size:30px;
+}
+
+.t_info_container {
+    margin: 50px 0px 0px 120px;
+}
+
+.t_info_group{
+    margin-top:30px;
+    display:flex;
+    width:300px;
+}
+
+.t_info_top {
+    text-align: center;
+    height:50px;
+    display:flex;
+}
+
+.t_info_top_font {
+    font-size: 35px;
+    margin-left: 33px;
+}
+
+.t_info_group_left {
+    width: 150px;
+    margin-top: 5px;
+}
+
+.t_info_group_right {
+    width: 100%;
+    display: inline-block;
+}
+
+.t_info_group_textbox {
+    border: none;
+    background: transparent;
+    border-radius: 5px;
+    outline: none;
+    padding: 8px;
+    width: 100%;
+    background-color: var(--color2);
+}
+
+.btn_save {
+    color: #fff;
+    border: 0;
+    padding: 10px 0;
+    background-color: var(--color1);
+    border: 0.5px solid #ccc;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    transition: 0.5s;
+    width: 50%;
+    margin-left: 70px;
 }

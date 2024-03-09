@@ -60,3 +60,17 @@ body {
             letter-spacing:0.5px;
             transition:0.5s;
         }
+
+        .form_group.tLogin {
+            padding-top:50px;
+            text-align: center;
+        }
+
+        .form_group.sLogin {
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        .form_group .ddl_subject{
+            width:83%;
+        }

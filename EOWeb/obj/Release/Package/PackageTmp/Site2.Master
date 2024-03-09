@@ -60,7 +60,7 @@
 
                     <div class="menu-item">
                         <label>
-                            <asp:LinkButton ID="lb_logout" CssClass="lb_logout linkbutton" runat="server"  OnClick="span_logout">退出登录</asp:LinkButton>
+                            <asp:LinkButton ID="lb_logout" CssClass="lb_logout linkbutton" runat="server">退出登录</asp:LinkButton>
                         </label>
                     </div>
                 </div>

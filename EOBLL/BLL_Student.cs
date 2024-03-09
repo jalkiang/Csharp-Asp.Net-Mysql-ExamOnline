@@ -20,14 +20,14 @@ namespace EOBLL
 
         public int UserRegister(Hashtable ht)
         {
-            string sql = "INSERT INTO tb_user(uName,uPwd) VALUES(@username,@password)";
+            string sql = "INSERT INTO tb_student(uName,uPassword) VALUES(@username,@password)";
             int rs = DBHelperMysql.excutScal(sql, ht);
             return rs;
         }
 
         public int SearchUser(Hashtable ht)
         {
-            string sql = "Select * from tb_user where uName = @uName65";
+            string sql = "Select * from tb_student where uName = @uName";
             int rs = DBHelperMysql.excutScal(sql, ht);
             return rs;
         }

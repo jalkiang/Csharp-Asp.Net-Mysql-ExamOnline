@@ -59,5 +59,17 @@ namespace EOBLL
             }
             return res;
         }
+
+        public bool ResPwd(EOModel.tb_Teacher tb_teacher)
+        {
+            bool res = false;
+            string strsql = "UPDATE tb_teacher SET tPassword = '"+tb_teacher.TeacherConPassword+"' WHERE tPassword = '"+tb_teacher.TeacherPassword+"' and tName='"+tb_teacher.TeacherName+"';";
+            int i = DBHelperMysql.ExcutSql(strsql);
+            if (i > 0)
+            {
+                res = true;
+            }
+            return res;
+        }
     }
 }
